@@ -30,9 +30,10 @@ while True:
         print(f"Unable to fetch repositories. Status code:{response.status_code}")
         break
 st.success(f"{github_username} GitHub Repositories: \n")
+st.success(f"\nTotal public repositories: {len(repositories)}")
+
 for index,repo in enumerate(repositories):
     st.success(f"{index+1}: {repo['name']}")
 
-st.success(f"\nTotal public repositories: {len(repositories)}")
 
 
